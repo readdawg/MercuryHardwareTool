@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.num_DoorCount = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.cbx_Connectivity = new System.Windows.Forms.ComboBox();
             this.pan_Ethernet = new System.Windows.Forms.Panel();
@@ -66,7 +66,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.lbl_Com52Num = new System.Windows.Forms.Label();
             this.btn_Calc = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_DoorCount)).BeginInit();
             this.pan_Ethernet.SuspendLayout();
             this.pan_RS485.SuspendLayout();
             this.pan_Comb.SuspendLayout();
@@ -81,13 +81,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Number of Doors";
             // 
-            // numericUpDown1
+            // num_DoorCount
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(118, 48);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(65, 20);
-            this.numericUpDown1.TabIndex = 1;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.num_DoorCount.Location = new System.Drawing.Point(118, 48);
+            this.num_DoorCount.Name = "num_DoorCount";
+            this.num_DoorCount.Size = new System.Drawing.Size(65, 20);
+            this.num_DoorCount.TabIndex = 1;
+            this.num_DoorCount.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -114,6 +114,7 @@
             this.cbx_Connectivity.Name = "cbx_Connectivity";
             this.cbx_Connectivity.Size = new System.Drawing.Size(121, 21);
             this.cbx_Connectivity.TabIndex = 2;
+            this.cbx_Connectivity.SelectedIndexChanged += new System.EventHandler(this.cbx_Connectivity_SelectedIndexChanged);
             // 
             // pan_Ethernet
             // 
@@ -457,12 +458,12 @@
             this.Controls.Add(this.pan_Ethernet);
             this.Controls.Add(this.cbx_Connectivity);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.num_DoorCount);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Calculate Hardware";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_DoorCount)).EndInit();
             this.pan_Ethernet.ResumeLayout(false);
             this.pan_Ethernet.PerformLayout();
             this.pan_RS485.ResumeLayout(false);
@@ -477,7 +478,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown num_DoorCount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbx_Connectivity;
         private System.Windows.Forms.Panel pan_Ethernet;
